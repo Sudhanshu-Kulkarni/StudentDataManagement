@@ -58,5 +58,20 @@ public class StudentOperations {
             System.out.println("Error: " + e.getMessage());
         }
     }
+    // Method to search for a student by name (case insensitive) and displays their details if found.
+    public void searchByName(String name) {
+        try {
+            for (Student student : students) {
+                if (student.getName().equalsIgnoreCase(name)) {
+                    student.display();
+                    return;
+                }
+            }
+            throw new StudentNotFoundException("Student with name '" + name + "' not found.");
+        } catch (StudentNotFoundException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
 
 }
