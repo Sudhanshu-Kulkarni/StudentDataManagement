@@ -9,5 +9,11 @@ public class StudentOperations {
         this.students = new ArrayList<>();
     }
 
+    // Custom Exception for duplicate student PRNs
+    public static class DuplicateStudentException extends Exception {
+        public DuplicateStudentException(String message) {
+            super(message);
+        }
+    }
 
 }
