@@ -35,5 +35,14 @@ public class StudentOperations {
             System.out.println("Error: " + e.getMessage());
         }
     }
+    // Displays details of all students in the list.
+    public void displayStudents() {
+        if (students.isEmpty()) {
+            System.out.println("No students to display.");
+        }
+        for (Student student : students) {
+            student.display();
+        }
+    }
 
 }
