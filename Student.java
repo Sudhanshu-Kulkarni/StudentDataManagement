@@ -10,6 +10,14 @@ public class Student {
     }
 
 
+    // Setter method to update the student's name
+    public void setName(String name){
+        this.name = name;  // Assigns the given name to the instance variable
+    }
 
+    // Getter method to retrieve the student's name
+    public String getName() {
+        return name;  // Returns the student's name
+    }
 
 }
