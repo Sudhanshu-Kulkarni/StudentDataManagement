@@ -15,5 +15,11 @@ public class StudentOperations {
             super(message);
         }
     }
+    // Custom Exception for when a student is not found
+    public static class StudentNotFoundException extends Exception {
+        public StudentNotFoundException(String message) {
+            super(message);
+        }
+    }
 
 }
