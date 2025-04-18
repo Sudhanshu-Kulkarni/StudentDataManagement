@@ -28,5 +28,9 @@ public class Student {
     public long getPRN() {
         return prn;  // Returns the student's PRN
     }
+    // Method to display the student's details (name and PRN)
+    public void display() {
+        System.out.println("Name: " + name + ", PRN: " + prn);  // Prints the student's details
+    }
 
 }
