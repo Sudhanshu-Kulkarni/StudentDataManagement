@@ -99,6 +99,21 @@ public class StudentOperations {
             System.out.println("Error: " + e.getMessage());
         }
     }
+    // Method to delete a student from the list based on their PRN.
+    public void deleteStudent(long prn) {
+        try {
+            for (Student student : students) {
+                if (student.getPRN() == prn) {
+                    students.remove(student);
+                    System.out.println("Student removed successfully.");
+                    return;
+                }
+            }
+            throw new StudentNotFoundException("Student with PRN " + prn + " not found.");
+        } catch (StudentNotFoundException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 
 
 }
