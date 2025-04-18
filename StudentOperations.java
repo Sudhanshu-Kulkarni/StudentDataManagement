@@ -84,6 +84,21 @@ public class StudentOperations {
             System.out.println("Error: " + e.getMessage());
         }
     }
+    // Method to update a student's name based on their PRN.
+    public void updateStudent(long prn, String newName) {
+        try {
+            for (Student student : students) {
+                if (student.getPRN() == prn) {
+                    student.setName(newName);
+                    System.out.println("Student details updated successfully.");
+                    return;
+                }
+            }
+            throw new StudentNotFoundException("Student with PRN " + prn + " not found.");
+        } catch (StudentNotFoundException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 
 
 }
